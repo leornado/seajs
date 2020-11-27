@@ -71,7 +71,7 @@ Module.prototype.pass = function() {
     // If has passed the entry to it's dependencies, modify the entry's count and del it in the module
     if (count > 0) {
       entry.remain += count - 1
-      mod._entry.shift()
+      mod._entry.splice(i, 1)
       i--
     }
   }
